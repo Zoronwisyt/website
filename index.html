@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen | Wis Presets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        tech: {
+                            bg: '#050505',
+                            card: '#0a0a0a',
+                            accent: '#00f0ff',
+                            purple: '#7000ff',
+                            surface: '#111111'
+                        }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #1f1f1f 1px, transparent 1px), linear-gradient(to bottom, #1f1f1f 1px, transparent 1px)",
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+        }
+        .glass-panel {
+            background: rgba(17, 17, 17, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .neon-border {
+            box-shadow: 0 0 5px theme('colors.tech.accent'), inset 0 0 5px theme('colors.tech.accent');
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: theme('colors.tech.accent');
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen relative overflow-x-hidden">
+
+    <!-- Background Grid -->
+    <div class="fixed inset-0 bg-grid-pattern bg-[length:40px_40px] opacity-20 pointer-events-none z-0"></div>
+    <div class="fixed inset-0 bg-gradient-radial from-tech-purple/10 via-transparent to-transparent opacity-30 pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+
+
+
+            </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-tech-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">HOME</a>
+                        <a href="#presets" class="text-tech-accent border border-tech-accent/30 bg-tech-accent/10 hover:bg-tech-accent/20 transition-all px-4 py-2 rounded-md text-sm font-medium font-mono">Shakes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                NEXT LEVEL <span class="text-transparent bg-clip-text bg-gradient-to-r from-tech-accent to-tech-purple">VISUALS</span>
+            </h1>
+            <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto font-light">
+                Premium Alight Motion W.I.S presets for beginners to study from. 
+                <span class="font-mono text-sm text-tech-accent block mt-2 opacity-75"></span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Presets Section -->
+    <section id="presets" class="relative py-20 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-3xl font-bold flex items-center gap-3">
+                    <span class="w-1 h-8 bg-tech-accent"></span>
+                    LATEST PRESETS
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Preset Card 1 -->
+                <div class="tech-card glass-panel rounded-xl overflow-hidden border border-white/5 transition-all duration-300 group">
+                    <div class="relative h-48 bg-black/50 overflow-hidden">
+                        <!-- Preview Image / Thumbnail -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="assets/kostas_preview.jpg" alt="Preset Preview" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Kostas Shakes</h3>
+                        <p class="text-xs text-gray-500 font-mono mb-4">ID: AM-2024-001 | 15.4 MB</p>
+                        
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+                        <!-- Action Buttons -->
+                        <div class="space-y-3">
+                            <a href="https://alightcreative.com/am/share/u/Ag3FCK1BrMRkaE14LL4cPt6maoD3/p/aUrJM0x4m5-4717a11d0cfa84da?source=link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 bg-tech-accent text-black font-bold text-sm rounded hover:bg-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                DIRECT IMPORT LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Preset Card 2 -->
+                <div class="tech-card glass-panel rounded-xl overflow-hidden border border-white/5 transition-all duration-300 group">
+                    <div class="relative h-48 bg-black/50 overflow-hidden">
+                        <!-- Preview Image / Thumbnail -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="https://yt3.googleusercontent.com/bVeukJSCY3ffxeWszld9hTY1cQmLOd94NZsfbR-v4s9mnDHQWAl7v_qvj8KPJvMQw2QmtJZnxA=s160-c-k-c0x00ffffff-no-rj" alt="Preset Preview" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Dragneel's 2.73k Pack</h3>
+                        <p class="text-xs text-gray-500 font-mono mb-4">ID: DRAG-2024 | SHAKES</p>
+                        
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+                        <!-- Action Buttons -->
+                        <div class="space-y-3">
+                            <a href="https://alightcreative.com/am/share/u/Ag3FCK1BrMRkaE14LL4cPt6maoD3/p/W754yb1Z4s-06c92279f85eaa8d?source=link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 bg-tech-accent text-black font-bold text-sm rounded hover:bg-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                DIRECT IMPORT LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preset Card 2 -->
+                <div class="tech-card glass-panel rounded-xl overflow-hidden border border-white/5 transition-all duration-300 group">
+                    <div class="relative h-48 bg-black/50 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/fe39cda4dabd70ad6f51d1836339cff1~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=9470b977&x-expires=1770764400&x-signature=V8hGP67Kxl%2F7SdU3vYMExajiTVI%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast5" alt="Preset Preview" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Yankes Shake Pack</h3>
+                        <p class="text-xs text-gray-500 font-mono mb-4">ID: YANK-2024 | SHAKES</p>
+                        
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+                        <div class="space-y-3">
+                            <a href="https://alightcreative.com/am/share/u/Ag3FCK1BrMRkaE14LL4cPt6maoD3/p/loK4p4KnLK-0c41627c463e0d70?source=link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 bg-tech-accent text-black font-bold text-sm rounded hover:bg-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                DIRECT IMPORT LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preset Card 4 -->
+                <div class="tech-card glass-panel rounded-xl overflow-hidden border border-white/5 transition-all duration-300 group">
+                    <div class="relative h-48 bg-black/50 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="https://i.pinimg.com/1200x/e7/40/08/e74008f322294fe29b364a02c98611af.jpg" alt="Preset Preview" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Light>Shakes</h3>
+                        <p class="text-xs text-gray-500 font-mono mb-4">ID: NEW-001 | SHAKES</p>
+                        
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+                        <div class="space-y-3">
+                            <a href="https://alightcreative.com/am/share/u/Ag3FCK1BrMRkaE14LL4cPt6maoD3/p/ja4h1mqDRW-e6ac5ba4501dbc01?source=link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 bg-tech-accent text-black font-bold text-sm rounded hover:bg-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                DIRECT IMPORT LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preset Card 5 -->
+                <div class="tech-card glass-panel rounded-xl overflow-hidden border border-white/5 transition-all duration-300 group">
+                    <div class="relative h-48 bg-black/50 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="https://i.pinimg.com/1200x/a6/77/63/a6776305ad34d1fdb656a0029ab01504.jpg" alt="Preset Preview" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Yankes /geno wis pack</h3>
+                        <p class="text-xs text-gray-500 font-mono mb-4">ID: NEW-002 | SHAKES</p>
+                        
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+                        <div class="space-y-3">
+                            <a href="https://alightcreative.com/am/share/u/Ag3FCK1BrMRkaE14LL4cPt6maoD3/p/fTU2m6HkLa-e249a7f81b50c49d?source=link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 bg-tech-accent text-black font-bold text-sm rounded hover:bg-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                DIRECT IMPORT LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preset Card 6 -->
+                <div class="tech-card glass-panel rounded-xl overflow-hidden border border-white/5 transition-all duration-300 group">
+                    <div class="relative h-48 bg-black/50 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                        <img src="https://i.pinimg.com/736x/02/7f/74/027f745aca2eedb368028e5d5cad432e.jpg" alt="Preset Preview" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                    </div>
+                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">axonz shakes</h3>
+                        <p class="text-xs text-gray-500 font-mono mb-4">ID: NEW-003 | SHAKES</p>
+                        
+                        <p class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+                        <div class="space-y-3">
+                            <a href="https://alightcreative.com/am/share/u/Ag3FCK1BrMRkaE14LL4cPt6maoD3/p/3O3e83BLLN-0cab263003950348?source=link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 bg-tech-accent text-black font-bold text-sm rounded hover:bg-white hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] transition-all">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                DIRECT IMPORT LINK
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 bg-black/50 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm font-mono"></p>
+        </div>
+    </footer>
+
+</body>
+</html>
